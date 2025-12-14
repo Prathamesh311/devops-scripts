@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/ReyazShaik/java-project-maven-new.git'
+                git 'https://github.com/Prathamesh311/java-project-maven-new.git'
             }
         }
         stage('Compile') {
