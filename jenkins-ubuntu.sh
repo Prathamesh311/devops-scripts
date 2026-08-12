@@ -22,7 +22,7 @@ cd /opt/jenkins
 # Download Jenkins WAR
 if [ ! -f jenkins.war ]; then
   echo "Downloading Jenkins WAR..."
-  wget https://get.jenkins.io/war/2.552/jenkins.war
+  wget https://get.jenkins.io/war/2.577/jenkins.war
 else
   echo "Jenkins WAR already exists"
 fi
