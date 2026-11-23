@@ -1,10 +1,13 @@
-#!/bin/bash
+#! /bin/bash
+#Launch an instance with 9000 and t2.medium
 cd /opt/
-dnf install -y java-17-amazon-corretto wget unzip
-wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.4.1.54424.zip
-unzip sonarqube-10.4.1.54424.zip
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-26.11.0.134175.zip
+unzip sonarqube-26.11.0.134175.zip
+sudo dnf install -y java-21-amazon-corretto-devel
 useradd sonar
-chown -R sonar:sonar sonarqube-10.4.1.54424
+chown sonar:sonar sonarqube-26.11.0.134175 -R
+chmod 777 sonarqube-26.11.0.134175 -R
 su - sonar
-# sh /opt/sonarqube-10.4.1.54424/bin/linux-x86-64/sonar.sh start
-# user=admin password=admin
+# use the below command manually after installation
+#sh /opt/sonarqube-26.11.0.134175/bin/linux-x86-64/sonar.sh start
+#echo "user=admin & password=admin"
